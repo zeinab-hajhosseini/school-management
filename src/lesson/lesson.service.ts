@@ -30,4 +30,8 @@ export class LessonService {
   async getLesson(id): Promise<LessonEntity> {
     return this.lessonRepository.findOneBy({ id });
   }
+
+  async getLessons(): Promise<LessonEntity[]> {
+    return this.lessonRepository.find();
+  }
 }
